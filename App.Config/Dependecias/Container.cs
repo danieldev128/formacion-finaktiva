@@ -24,10 +24,20 @@ namespace App.Config.Dependecias
             #endregion
 
             #region Repositories
+            services.AddScoped<IProductoRepository, ProductoRepository>();
+            services.AddScoped<IinventarioRepository, InventarioRepository>();
+            services.AddScoped<IEmpleadoRepository, EmpleadoRepository>();
+            services.AddScoped<IDetalleRepository, DetalleRepository>();
+            services.AddScoped<IClienteRepository, ClienteRepository>();
             services.AddScoped<ILogsGeneralRepository, LogsGeneralRepository>();
             #endregion
 
             #region Services
+            services.AddScoped<IProductoService, ProductoService>();
+            services.AddScoped<IinventarioService, InventarioService>();
+            services.AddScoped<IEmpleadoService, EmpleadoService>();
+            services.AddScoped<IDetalleService, DetalleService>();
+            services.AddScoped<IClienteService, ClienteService>();
             services.AddScoped<ILogsGeneralServices, LogsGeneralServices>();
             services.AddScoped<ILogsGeneralConBaseServices, LogsGeneralConBaseServices>();
             #endregion
@@ -47,7 +57,7 @@ namespace App.Config.Dependecias
             #region Conection
 
             services.AddDbContext<DataContext>(
-                options => options.UseSqlServer(configuration.GetConnectionString("AktivaContext"))
+                options => options.UseSqlServer(configuration.GetConnectionString("facturacionTienda"))
             );
 
             #endregion
