@@ -11,11 +11,14 @@ namespace App.Common.DTO
     {
         [Key]
         public int IdProducto { get; set; }
+
+        [Required]
         public string NombreProducto { get; set; }
-
+        [Required]
         public decimal PrecioProducto { get; set; }
+        [Required]
         public string DescripcionProducto { get; set; }
-
+        [Required]
         public bool Disponible { get; set; } 
 
     }

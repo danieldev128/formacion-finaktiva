@@ -8,7 +8,7 @@ namespace App.Common.DTO
 {
     public class InventarioDTO
     {
-        public int IdInventario { get; set; }
+      
         public int CantidadProducto { get; set; }
         public int IdProducto { get; set; }
     }

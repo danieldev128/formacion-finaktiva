@@ -24,6 +24,7 @@ namespace App.Config.Dependecias
             #endregion
 
             #region Repositories
+            services.AddScoped<IFacturaRepository, FacturaRepository>();
             services.AddScoped<IProductoRepository, ProductoRepository>();
             services.AddScoped<IinventarioRepository, InventarioRepository>();
             services.AddScoped<IEmpleadoRepository, EmpleadoRepository>();
@@ -33,6 +34,7 @@ namespace App.Config.Dependecias
             #endregion
 
             #region Services
+            services.AddScoped<IFacturaService, FacturaService>();
             services.AddScoped<IProductoService, ProductoService>();
             services.AddScoped<IinventarioService, InventarioService>();
             services.AddScoped<IEmpleadoService, EmpleadoService>();

@@ -15,9 +15,9 @@ namespace App.Infrastructure.Database
         public DbSet<Cliente> Cliente { get; set; }
         public DbSet<Detalle> Detalle { get; set; }
         public DbSet<Empleado> Empleado { get; set;}
-
         public DbSet<Inventario> Inventario { get; set; }
         public DbSet<Producto> Producto { get; set; }
+        public DbSet<Factura> Factura { get; set; }
         //public DbSet<LogsGeneral> LogsGeneral { get; set; }
         public DataContext(DbContextOptions<DataContext> options) : base(options)
         {

@@ -7,19 +7,19 @@ using System.Threading.Tasks;
 
 namespace App.Infrastructure.Database.Entities
 {
-    public  class Detalle
+    public class Factura
     {
         [Key]
-        public int IdDetalle { get; set; }
-
-        [Required]
-        public int CantidadProducto { get; set; }
-        [Required]
-        public decimal Precio { get; set; }
-        [Required]
-        public int IdProducto { get; set; }
-        [Required]
         public int IdFactura { get; set; }
-
+        [Required]
+        public decimal Iva { get; set; }
+        [Required]
+        public int IdEstadoFactura { get; set; }
+        [Required]
+        public int IdCliente { get; set; }
+        [Required]
+        public int IdEmpleado { get; set; }
+        [Required]
+        public DateTime FechaFactura { get; set; }
     }
 }

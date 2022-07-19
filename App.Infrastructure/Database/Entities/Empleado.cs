@@ -11,22 +11,27 @@ namespace App.Infrastructure.Database.Entities
     {
         [Key]
         public int idEmpleado { get; set; }
+        [Required]
         public string Nombre { get; set; }
 
+        [Required]
         public string Apellido { get; set; }
 
         public DateTime FechaNacimiento { get; set; }
 
+        [Required]
         public string Direccion { get; set; }
-
+        [Required]
         public string correo { get; set; }
 
+        [Required]
         public int edad { get; set; }
-
+        [Required]
         public string cedula { get; set; }
-
+        [Required]
         public string cargo { get; set; }
 
+        [Required]
         public string contrasena { get; set; }
 
     }

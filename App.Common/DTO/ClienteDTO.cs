@@ -9,8 +9,7 @@ namespace App.Common.DTO
 {
     public class ClienteDTO
     {
-        [Key]
-        public int IdCliente { get; set; }
+       
         public string Nombre { get; set; }
         public string Apellido { get; set; }
         public DateTime FechaNacimiento { get; set; }

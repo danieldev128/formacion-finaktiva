@@ -53,12 +53,28 @@ namespace App.Web.Controllers
                 r.Header.Code = HttpCodes.BadRequest;
                 r.Header.Message = ex.Message;
                 return BadRequest(r);
-            
-            
             }
-        
-        
         }
+        ////public IActionResult ActualizarProducto(ProductoDTO productoDTO) {
+
+        ////    Response<List<ProductoDTO>> r = new Response<List<ProductoDTO>>();
+
+        ////    try {
+        ////        _productoService.Ac(productoDTO);
+        ////        return BadRequest(r);
+            
+        ////    } catch (Exception ex) {
+
+        ////        r.Header.Code = HttpCodes.BadRequest;
+        ////        r.Header.Message = ex.Message;
+        ////        return BadRequest(r);
+            
+            
+        ////    }
+        
+        
+        //}
+
 
     }
 }

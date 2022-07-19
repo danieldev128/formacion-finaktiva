@@ -9,7 +9,6 @@ namespace App.Common.DTO
 {
     public class ProductoDTO
     {
-        [Key]
         public int IdProducto { get; set; }
         public string NombreProducto { get; set; }
 

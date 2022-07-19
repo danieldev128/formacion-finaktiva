@@ -11,7 +11,9 @@ namespace App.Infrastructure.Database.Entities
     {   
         [Key]
         public int IdInventario { get; set; }
+        [Required]
         public int CantidadProducto { get; set; }
+        [Required]
         public int IdProducto { get; set; }
     }
 }
