@@ -17,6 +17,8 @@ namespace App.Config.Dependecias
             CreateMap<Inventario, InventarioDTO>().ReverseMap();
             CreateMap<Producto, ProductoDTO>().ReverseMap();
             CreateMap<Factura, FacturaDTO>().ReverseMap();
+            CreateMap<vw_productos, ProductoDTO>().ReverseMap();
+
 
         }
     }

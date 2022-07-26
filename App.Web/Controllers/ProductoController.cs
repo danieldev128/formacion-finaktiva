@@ -10,6 +10,8 @@ using System.Threading.Tasks;
 
 namespace App.Web.Controllers
 {
+    [Route("api/[controller]")]
+    [ApiController]
     public class ProductoController:ControllerBase
     {
         private IProductoService _productoService;
@@ -37,8 +39,8 @@ namespace App.Web.Controllers
             
         }
 
-        [HttpPost]
-        [Route("AgregarProducto")]
+        [HttpPost("AgregarProducto")]
+        //[Route("AgregarProducto")]
 
         public IActionResult AgregarProducto(ProductoDTO productoDTO) {
 
@@ -54,6 +56,26 @@ namespace App.Web.Controllers
                 r.Header.Message = ex.Message;
                 return BadRequest(r);
             }
+        }
+
+        [HttpPost("EditarProducto")]
+        public IActionResult editarProducto(int idProducto){
+            Response<ProductoDTO> r = new Response<ProductoDTO>();
+            try
+            {
+
+                r.Data = this._productoService.Editar(idProducto);
+                return Ok(r);
+
+            }
+            catch (Exception ex) {
+                r.Header.Code = HttpCodes.BadRequest;
+                r.Header.Message = ex.Message;
+                return BadRequest(r);
+
+            }
+        
+        
         }
         ////public IActionResult ActualizarProducto(ProductoDTO productoDTO) {
 

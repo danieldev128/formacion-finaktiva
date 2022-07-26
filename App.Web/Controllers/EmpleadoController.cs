@@ -10,6 +10,8 @@ using System.Threading.Tasks;
 
 namespace App.Web.Controllers
 {
+    [Route("api/[controller]")]
+    [ApiController]
     public class EmpleadoController: ControllerBase
     {
 

@@ -17,6 +17,9 @@ namespace App.Common.DTO
 
         public bool Disponible { get; set; }
 
+        public int Cantidad { get; set; }
+
+
 
     }
 }

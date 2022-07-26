@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using App.Common.DTO;
 using App.Infrastructure.Database.Entities;
 using Microsoft.EntityFrameworkCore;
 
@@ -18,6 +17,7 @@ namespace App.Infrastructure.Database
         public DbSet<Inventario> Inventario { get; set; }
         public DbSet<Producto> Producto { get; set; }
         public DbSet<Factura> Factura { get; set; }
+        public DbSet<vw_productos> VwProdcutos { get; set; }
         //public DbSet<LogsGeneral> LogsGeneral { get; set; }
         public DataContext(DbContextOptions<DataContext> options) : base(options)
         {

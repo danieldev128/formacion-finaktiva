@@ -19,5 +19,9 @@ namespace App.Common.DTO
 
         public DateTime FechaFactura { get; set; }
 
+        public ClienteDTO Cliente { get; set; } 
+
+        public List<DetalleDTO> Detalles { get; set; }
+
     }
 }
