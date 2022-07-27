@@ -49,7 +49,7 @@ namespace App.Web.Controllers
             try {
 
                 _productoService.AgregarProducto(productoDTO);
-                return Ok();
+                return Ok(r.Header);
             
             } catch (Exception ex) {
                 r.Header.Code = HttpCodes.BadRequest;
